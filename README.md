@@ -16,8 +16,10 @@ This is a URL Shortening service written in Python using Flask and SQLAlchemy.
     ### To Shorten a URL (```/shortenUrl```)
     1) Make a POST request of the following JSON schema
         ```{'url': '<insert url to shorten here>'}```
-        **Example Request:** 
+
+       **Example Request:** 
         ```curl -X POST http://127.0.0.1:5000/shortenUrl -H "Content-Type: application/json" -d '{"url": "https://news.unitedmasters.com/blog/brent-faiyaz-billboard"}'```
+
         **Example Response:** 
         ```{ "shortened_url" : "http://127.0.0.1:5000/BlQBJh"}```
 
@@ -29,9 +31,11 @@ This is a URL Shortening service written in Python using Flask and SQLAlchemy.
     ### To Get the Original URL (```/getOriginalUrl```)
     1) Make a POST request of the following JSON schema
         ```{'url': '<insert shortened url>'}```
-        **Example Request:**
+
+       **Example Request:**
         ```curl -X GET http://127.0.0.1:5000/getOriginalUrl -H "Content-Type: application/json" -d '{"url": "http://127.0.0.1:5000/BlQBJh"}'```
-        **Example Response:**
+
+       **Example Response:**
         ```{"original_url" : "https://news.unitedmasters.com/blog/brent-faiyaz-billboard"}```
         
 
