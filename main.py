@@ -12,10 +12,13 @@ db = SQLAlchemy(app)
 class Url(db.Model):
     id = mapped_column(Integer, primary_key=True)
     original_url = mapped_column(String(500), nullable=False)
-    shortened_url = mapped_column(String(10), unique=True, nullable=False)
+    shortened_url = mapped_column(String(20), unique=True, nullable=False)
 
 @app.route('/')
 def index():
+    # TODO: Could add a UI for inputting a url to shorten, just a text field and
+    # a button that makes a POST call to the /shortenUrl endpoint (might require
+    # using Ajax to do the API call with the correct JSON format)
     return 'Welcome to URL Shortener!'
 
 @app.route('/shortenUrl', methods=['POST'])
@@ -39,7 +42,7 @@ def shorten_url():
     
     # generate a new shortened url
     short_token = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
-    # TODO: Possibility duplicate short tokens for different long URLs, would
+    # TODO: Possibility for duplicate short tokens for different long URLs, would
     # need to check for uniqueness
     # Currently we will always just return the first result even if there's a
     # duplicate

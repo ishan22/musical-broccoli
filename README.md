@@ -1,11 +1,13 @@
 # musical-broccoli
 UMT Coding Assignment - URL Shortener
 
+Time to complete: *2 hours 10 minutes*
+
 This is a URL Shortening service written in Python using Flask and SQLAlchemy.
 
 ## Setup/Installation
 1) Clone repo ```git clone https://github.com/ishan22/musical-broccoli.git```
-2) Run ```pip install -r requirements.txt``` to install necessary libraries
+2) Run ```pip3 install -r requirements.txt``` to install necessary libraries
 
 
 ## To Run
