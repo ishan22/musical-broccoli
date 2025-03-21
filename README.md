@@ -30,7 +30,7 @@ This is a URL Shortening service written in Python using Flask and SQLAlchemy.
     1) Make a POST request of the following JSON schema
         ```{'url': '<insert shortened url>'}```
         **Example Request:**
-        ```{ "url" : "http://127.0.0.1:5000/BlQBJh"}```
+        ```curl -X GET http://127.0.0.1:5000/getOriginalUrl -H "Content-Type: application/json" -d '{"url": "http://127.0.0.1:5000/BlQBJh"}'```
         **Example Response:**
         ```{"original_url" : "https://news.unitedmasters.com/blog/brent-faiyaz-billboard"}```
         
